@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="cardContainer">
+            <ul class="cards">
+                <li class="card addNote">
+                    <div class="newNoteIcon">
+                        <span>+</span>
+                    </div>
+                    <div class="newNoteText">Add new note</div>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+
+    <div class="create--note">
+        <div class="fixed--note">
+            <div class="card--title">
+                <div class="left--title">Create a Note</div>
+                <div class="clocseIcon"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+            <div class="card--details">
+                <div class="textInput">
+                    <label for="">Title</label>
+                    <input id='title' type="text">
+                </div>
+                <div class="descript">
+                   <label> Description
+                       
+                   </label>
+                   <textarea  id="message" cols="30" rows="10"></textarea>
+                </div>
+               
+                <button class="updateBtn">
+                    Create Note
+                </button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

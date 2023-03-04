@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    width:100%;
+    height:100%;
+}
+body.layout {
+    overflow: hidden;
+}
+.container{
+   width:100%;
+   min-height:100vh;
+ background-color:#9B59B6;
+ position: relative;
+}
+.cardContainer{
+    padding:100px 20px 50px;
+    display:flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.cards{
+    display:flex;
+    list-style: none;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.card{
+    background-color:#fff;
+    width:300px;
+    border-radius: 5px;
+    position: relative;
+}
+.addNote{
+    cursor:pointer;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:400px;
+}
+.descCard{
+    padding:20px;
+
+}
+
+.newNoteIcon{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    border:2px dashed #9B59B6;
+    text-align: center;
+    line-height: 100px;
+
+}
+.newNoteIcon span{
+    font-size:40px;
+}
+.newNoteText{
+    color:#9B59B6;
+    font-weight:bold;
+    padding-top:20px;
+}
+.description p{
+    padding-bottom:10px;
+}
+.description{
+    /* border-bottom: 1px solid rgb(223, 223, 223); */
+    min-height:160px;
+    padding-bottom: 26px;
+}
+.DateWithEdit{
+    padding-top:10px;
+    border-top: 1px solid rgb(223, 223, 223);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:88%;
+    position: absolute;
+    bottom:10px;
+   
+}
+.edit{
+    cursor: pointer;
+    position: relative;
+}
+.btn{
+    position: absolute;
+    top:-50px;
+    right:0;
+    cursor: pointer;
+}
+.edit .containerBtn{
+    position: absolute;
+    bottom:0;
+    right:-5px;
+    cursor: pointer;
+    background-color:#fff;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    color:#9B59B6;
+    font-weight: 600;
+    z-index:10;
+}
+.edit.active .containerBtn{
+    transform: scale(1);  
+}
+.containerBtn span{
+    display: block;
+    margin:2px 0;
+    padding:5px 20px;;
+}
+.containerBtn .icons:hover{
+    background-color:rgb(224, 223, 223);
+}
+.icons{
+    display:flex;
+    align-items: center;
+    padding-left:10px;
+}
+
+.dots{
+    font-size:2rem;
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    background-color: rgba(0,0,0,0.3);
+    width:100%;
+    height:100%;
+}
+.fixed--note{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index:1;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+.card--title{
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    align-items: center;
+}
+.card--details{
+    padding:30px 20px;
+}
+.clocseIcon{
+    font-size:1.2rem;
+    cursor: pointer;
+}
+.card--details label, .left--title{
+    font-weight:bold;
+}
+.textInput input{
+    width:100%;
+    padding: 10px;
+    border-radius: 0.5em;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #000048;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    border: 1px solid #d0d0ce;
+    outline: none;
+    margin-bottom: 30px;
+}
+#message{
+    width: 100%;
+    margin: 0 0 1rem;
+    padding: 0.4rem;
+    border-radius: 0.5em;
+    box-shadow: inset 0 1px 2px rgb(0 0 72 / 10%);
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #000048;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    border: 1px solid #d0d0ce;
+    /* background: #f5f5f2; */
+    box-shadow: none;
+    position: relative;
+    outline: none;
+    resize: vertical;
+}
+.updateBtn{
+    width:100%;
+    border:none;
+    outline:none;
+    padding:15px 10px;
+    color:#fff;
+    background-color: rgb(14, 165, 224);
+    cursor: pointer;
+    font-size:1rem;
+}
+.create--note{
+    display: none;
+}
+.create--note.modal{
+    display: block;
+}
